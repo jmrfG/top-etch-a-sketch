@@ -11,6 +11,7 @@ const gridSizeSlider = document.getElementById("gridSizeSlider");
 const clearBttn = document.querySelector(".cButton");
 //DEFAULT VALUES
 const width = grid.offsetWidth;
+const height = grid.offsetHeight;
 let penColor = "black"
 let mode = 1;
 let shape = 1;
@@ -31,7 +32,7 @@ function createGrid(gridSize) {
             cell.addEventListener('mouseover', changeColor)
             cell.classList.add("cell");
             cell.style.width = `${width / gridSize}px`;
-            cell.style.height = `${width / gridSize}px`;
+            cell.style.height = `${height / gridSize}px`;
             cell.style.borderRadius = addShape(shape);
             grid.appendChild(cell);
         }
@@ -103,11 +104,14 @@ function reloadGrid() {
 
 colorPick.addEventListener("input", setColor)
 
-gridSizeSlider.addEventListener("input", (e) => {
+gridSizeSlider.onmousemove = (e) => {
     setGridSize(e)
     gridSizeText.textContent = `${gridSize} x ${gridSize}`;
-    reloadGrid();
-})
+}
+
+gridSizeSlider.onchange = () => {
+    reloadGrid(gridSize)
+}
 
 modes.forEach((m) => {
     m.addEventListener("click", setMode)
