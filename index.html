@@ -7,13 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Grid</title>
+    <title>Etch-a-sketch</title>
 </head>
 
 <body>
+    <h1 class="title">Paint holder</h1>
     <div class="container">
-        <div class="grid">
+        <div class="panel">
+            <h1>Just like paint, only worse</h1>
+            <div class="color-settings">
+                <h3>Color settings:</h3>
+                <input type="color" name="color" id="cPick">
+                <button class="button" id="cMode" value="1">Color mode</button>
+                <button class="button" id="sMode" value="2">Surprise mode</button>
+                <button class="button" id="eMode" value="3">Eraser mode</button>
+                <button class="cButton" id="clear">Erase all</button>
+            </div>
 
+
+            <div class="grid-size-settings">
+                <h3>Grid size settings:</h3>
+
+                <button class="shape-bttn" value="1">Pixel mode</button>
+                <button class="shape-bttn" value="2">Dot mode</button>
+                <div id="gridSize">16 x 16</div>
+                <input type="range" name="slider" id="gridSizeSlider" min="4" max="80" value="16">
+            </div>
+        </div>
+        <div class="grid">
         </div>
     </div>
 </body>
