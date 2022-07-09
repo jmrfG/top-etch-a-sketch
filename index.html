@@ -11,32 +11,35 @@
 </head>
 
 <body>
-    <h1 class="title">Paint holder</h1>
+    <h1 class="title">Etch-a-sketch</h1>
     <div class="container">
         <div class="panel">
-            <h1>Just like paint, only worse</h1>
-            <div class="color-settings">
-                <h3>Color settings:</h3>
+            <h1>Just like paint, only uglier</h1>
+            <div class="settings">
+                <h3>Settings:</h3>
                 <input type="color" name="color" id="cPick">
-                <button class="button" id="cMode" value="1">Color mode</button>
-                <button class="button" id="sMode" value="2">Surprise mode</button>
-                <button class="button" id="eMode" value="3">Eraser mode</button>
-                <button class="cButton" id="clear">Erase all</button>
-            </div>
-
-
-            <div class="grid-size-settings">
-                <h3>Grid size settings:</h3>
-
-                <button class="shape-bttn" value="1">Pixel mode</button>
-                <button class="shape-bttn" value="2">Dot mode</button>
+                <label for="cPick" id="color-picker"></label>
+                <button class="button" id="button" value="1">Color mode</button>
+                <button class="button" id="button" value="2">Surprise mode</button>
+                <button class="button" id="button" value="3">Eraser mode</button>
+                <button class="cButton" id="button">Erase all</button>
+                <button class="shape-bttn" id="button" value="1">Pixel mode</button>
+                <button class="shape-bttn" id="button" value="2">Dot mode</button>
                 <div id="gridSize">16 x 16</div>
-                <input type="range" name="slider" id="gridSizeSlider" min="4" max="80" value="16">
+                <input type="range" class="slider" name="slider" id="gridSizeSlider" min="4" max="64" value="16">
             </div>
         </div>
+
         <div class="grid">
         </div>
     </div>
+    <footer>
+        <p>by jmrfG
+            <a href="https://github.com/jmrfG" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-github"></i>
+            </a>
+        </p>
+    </footer>
 </body>
 <script src="main.js"></script>
 

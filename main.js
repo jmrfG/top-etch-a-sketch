@@ -5,9 +5,10 @@ const grid = document.querySelector(".grid");
 const modes = document.querySelectorAll(".button");
 const shapeModes = document.querySelectorAll(".shape-bttn");
 const colorPick = document.getElementById("cPick");
+const labelPick = document.getElementById("color-picker");
 const gridSizeText = document.getElementById("gridSize");
 const gridSizeSlider = document.getElementById("gridSizeSlider");
-const clearBttn = document.getElementById("clear");
+const clearBttn = document.querySelector(".cButton");
 //DEFAULT VALUES
 const width = grid.offsetWidth;
 let penColor = "black"
@@ -47,6 +48,7 @@ function setShapeMode(e) {
 
 function setColor(e) {
     penColor = e.target.value;
+    labelPick.style.backgroundColor = penColor;
 }
 
 function setGridSize(e) {
